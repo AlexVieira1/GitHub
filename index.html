@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div> R$30.89</div>
+    <button onclick="remover(0)" id="remover">-</button>
+    <span id="quantidade0" type="email">0</span>
+    <button onclick="adicionar(0)" id="adicionar">+</button>
+    <div class="total" id="total0">R$00,00
+
+    </div>
+    <script>
+        var valorTotal = [0,0]
+var valorProduto = [30.89]
+var qtd = [0,0]
+
+function adicionar(item) {
+    var quantidade = document.getElementById("quantidade" + item)
+    var total = document.getElementById("total" + item)
+    qtd[item] += 1
+    valorTotal[item] = Number.parseFloat(valorProduto[item]) * qtd[item]
+    quantidade.innerHTML = qtd[item]
+    total.innerHTML = valorTotal[item].toFixed(2)
+}
+function remover(item) {
+    if (qtd[item] > 0) {
+        qtd[item]-=1
+        var quantidade = document.getElementById("quantidade" + item)
+        var total = document.getElementById("total" + item)
+        valorTotal[item] = Number.parseFloat(valorProduto[item]) * qtd[item]
+        quantidade.innerHTML = qtd[item]
+        total.innerHTML = valorTotal[item].toFixed(2)
+    }
+    
+}
+var valorTotal = [0,0]
+var valorProduto = [30.89]
+var qtd = [0,0]
+
+function adicionar(item) {
+    var quantidade = document.getElementById("quantidade" + item)
+    var total = document.getElementById("total" + item)
+    qtd[item] += 1
+    valorTotal[item] = Number.parseFloat(valorProduto[item]) * qtd[item]
+    quantidade.innerHTML = qtd[item]
+    total.innerHTML = valorTotal[item].toFixed(2)
+}
+    </script>
+</body>
+</html>
