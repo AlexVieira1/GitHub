@@ -12,9 +12,8 @@
     <div> R$30.89</div>
     <button onclick="remover(0)" id="remover">-</button>
     <span id="quantidade0" type="email">0</span>
-    <button onclick="adicionar(0)" id="adicionar">+</button>
-    <div class="total" id="total0">R$00,00
-    </div>
+    <button onclick="adicionar(0)" id="adicionar">+</button><br>
+    <span class="total" id="total0">R$00,00</span>
     
     <script>
 
@@ -39,18 +38,6 @@
                 quantidade.innerHTML = qtd[item]
                 total.innerHTML = valorTotal[item].toFixed(2)
             }
-        }
-        var valorTotal = [0, 0]
-        var valorProduto = [30.89]
-        var qtd = [0, 0]
-
-        function adicionar(item) {
-            var quantidade = document.getElementById("quantidade" + item)
-            var total = document.getElementById("total" + item)
-            qtd[item] += 1
-            valorTotal[item] = Number.parseFloat(valorProduto[item]) * qtd[item]
-            quantidade.innerHTML = qtd[item]
-            total.innerHTML = valorTotal[item].toFixed(2)
         }
     </script>
 </body>
