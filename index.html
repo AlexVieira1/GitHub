@@ -9,12 +9,28 @@
 </head>
 
 <body>
-    <div> R$30.89</div>
-    <button onclick="remover(0)" id="remover">-</button>
-    <span id="quantidade0" type="email">0</span>
-    <button onclick="adicionar(0)" id="adicionar">+</button><br>
-    <span class="total" id="total0">R$00,00</span>
-    
+    <section>
+        54.99
+        <button onclick="remover(0)" id="remover0">-</button>
+        <span id="quantidade0" type="number">0</span>
+        <button onclick="adicionar(0)" id="adicionar0">+</button>
+        <span id="total0">0</span>
+    </section>
+    <section>
+        39.99
+        <button onclick="remover(1)" id="remover1">-</button>
+        <span id="quantidade1" type="number">0</span>
+        <button onclick="adicionar(1)" id="adicionar1">+</button>
+        <span id="total1">0</span>
+    </section>
+    <section>
+        45.99
+        <button onclick="remover(2)" id="remover2">-</button>
+        <span id="quantidade2" type="number">0</span>
+        <button onclick="adicionar(2)" id="adicionar2">+</button>
+        <span id="total2">0</span>
+    </section>
+    <span id="valorTotalCompra">0</span>
     <script>
         var valorProduto = [54.99, 39.99, 45.99]
         var totalProduto = [0, 0, 0]
